@@ -1,0 +1,218 @@
+/* Estilos Gerais e Reset Básico */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column; /* Para empilhar o header, main e footer */
+    min-height: 100vh; /* Garante que o footer fique no final da página */
+}
+
+.hero {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    /* Ajuste aqui se precisar centralizar todo o hero, caso contrário, mantenha como está */
+    display: flex;
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo do hero */
+    gap: 20px; /* Mantém o espaçamento entre elementos do hero */
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column; /* Empilha os elementos: círculo, nome, contatos */
+    align-items: center; /* Centraliza horizontalmente os itens dentro de profile-info */
+    text-align: center; /* Centraliza o texto (nome, contatos) */
+}
+
+.initial-circle {
+    width: 120px; /* Tamanho do círculo da imagem */
+    height: 120px; /* Tamanho do círculo da imagem */
+    border-radius: 50%; /* Transforma a div em um círculo */
+    overflow: hidden; /* Corta a imagem para caber no círculo */
+    border: 4px solid #007bff; /* Borda ao redor da foto de perfil */
+    margin-bottom: 15px; /* Espaço entre a foto e o nome */
+    /* Remove background-color, color, font-size, font-weight pois agora é uma imagem */
+    display: flex; /* Para centralizar a imagem dentro do círculo */
+    justify-content: center;
+    align-items: center;
+}
+
+.initial-circle img {
+    width: 100%; /* A imagem preenche a largura do círculo */
+    height: 100%; /* A imagem preenche a altura do círculo */
+    object-fit: cover; /* Recorta a imagem para cobrir o círculo sem distorcer */
+    display: block; /* Remove espaços extras indesejados */
+}
+
+.hero h1 {
+    margin: 0;
+    color: #007bff;
+    font-size: 2.2em; /* Ajuste o tamanho do nome se necessário */
+    margin-bottom: 5px; /* Espaçamento abaixo do nome */
+}
+
+.hero p {
+    margin: 3px 0; /* Espaçamento menor para os parágrafos de contato */
+    color: #555;
+    font-size: 1em;
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 20px;
+    flex: 1; /* Permite que o wrapper ocupe o espaço disponível */
+    max-width: 1200px; /* Largura máxima para o conteúdo principal */
+    margin: 20px auto; /* Centraliza o conteúdo principal */
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px; /* Cantos arredondados para o wrapper */
+    overflow: hidden; /* Garante que o box-shadow e border-radius funcionem bem */
+}
+
+.sidebar {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 250px; /* Largura fixa para a sidebar */
+    flex-shrink: 0; /* Impede que a sidebar encolha */
+}
+
+.sidebar h2 {
+    color: #007bff;
+    margin-top: 0;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.skill-name {
+    font-weight: bold;
+}
+
+.skill-rating {
+    display: flex;
+    gap: 3px; /* Espaçamento entre as bolinhas */
+}
+
+.rating-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc; /* Cor da bolinha "vazia" */
+    border-radius: 50%;
+}
+
+.rating-dot.filled {
+    background-color: #007bff; /* Cor da bolinha "preenchida" */
+}
+
+
+.main-content {
+    flex-grow: 1; /* Permite que o conteúdo principal ocupe o restante do espaço */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section-block {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.section-block h2 {
+    color: #007bff;
+    margin-top: 0;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.section-block .item {
+    margin-bottom: 15px;
+    border-left: 3px solid #007bff; /* Linha à esquerda, como no desenho */
+    padding-left: 10px;
+}
+
+.section-block .item h3 {
+    margin: 0 0 5px 0;
+    color: #555;
+}
+
+.section-block .item p {
+    margin: 0 0 5px 0;
+}
+
+.section-block .item .period,
+.section-block .item .link {
+    font-size: 0.9em;
+    color: #777;
+}
+
+.section-block .item .description {
+    /* Garante que o texto longo dentro da descrição quebre para a linha de baixo */
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+}
+
+.section-block .item a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.section-block .item a:hover {
+    text-decoration: underline;
+}
+
+.contact-info {
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
+
+.contact-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: auto; /* Remove largura fixa em telas menores */
+    }
+
+    .hero {
+        flex-direction: column; /* Empilha os itens no hero em telas menores */
+        text-align: center;
+    }
+
+    .profile-info {
+        align-items: center; /* Centraliza a info do perfil em telas menores */
+    }
+}
